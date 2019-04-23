@@ -1,0 +1,61 @@
+@import '../../../_mixins/screen-size'
+@import '../../../_mixins/vars'
+@import '../../../_mixins/rem'
+
+.TopMenu
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-start
+  justify-content: space-between
+  margin-top: rem(50px)
+  width: 100%
+  position: absolute
+  z-index: 10
+  @include respond-to(md)
+    position: static
+    margin: 0
+    padding: rem(15px 0)
+  @include respond-to(sm)
+    padding-left: 65px
+
+.TopMenu__left-inner
+  width: 50%
+  @include respond-to(md)
+    display: none
+
+.TopMenu__right-inner
+  width: 50%
+  text-align: right
+  @include respond-to(md)
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+
+.TopMenu__logo
+  transition: all .3s ease
+  line-height: 1
+  margin-bottom: rem(25px)
+  @include respond-to(md)
+    width: 50%
+    margin: 0
+    text-align: left
+  &:hover
+    opacity: .6
+  img
+    height: rem(60px)
+    @include respond-to(sm)
+      height: rem(55px)
+    @include respond-to(xs)
+      height: rem(45px)
+    &:first-child
+      margin-right: rem(20px)
+      @include respond-to(sm)
+        display: none
+  svg
+    height: rem(60px)
+    width: rem(60px)
+    margin-right: rem(20px)
+    @include respond-to(sm)
+      display: none

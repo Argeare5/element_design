@@ -1,0 +1,43 @@
+@import '../../../_mixins/screen-size'
+@import '../../../_mixins/vars'
+@import '../../../_mixins/rem'
+
+.DefaultButton
+  position: relative
+  font-size: rem(25px)
+  line-height: 1
+  color: #fff
+  background: $black
+  padding: rem(15px 50px 18px)
+  display: inline-block
+  font-family: $defaultFont
+  font-weight: 400
+  text-align: center
+  letter-spacing: .5px
+  vertical-align: middle
+  cursor: pointer
+  background: 1px solid $black
+  @include respond-to(lg)
+    font-size: 20px
+    padding: rem(12px 35px 14px)
+  &:hover
+    color: $black
+    &:before
+      transform: scaleX(1)
+  &:before
+    content: ''
+    position: absolute
+    top: 1px
+    left: 1px
+    bottom: 1px
+    right: 1px
+    height: calc(100% - 2px)
+    transform: scaleX(0)
+    transform-origin: right center !important
+    background: #fff
+    transition: all .4s ease
+  span
+    position: relative
+    z-index: 1
+  canvas
+    z-index: 2 !important

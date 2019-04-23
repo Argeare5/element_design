@@ -1,0 +1,70 @@
+@import '../../../_mixins/screen-size'
+@import '../../../_mixins/vars'
+@import '../../../_mixins/rem'
+
+.Preloader
+  width: 100%
+
+.PreloaderImage
+  .text-row
+    width: 100% !important
+    height: rem(600px) !important
+    @include respond-to(xs)
+      height: 300px !important
+
+.ModalPreloader
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  .LeftInner, .RightInner
+    width: 48%
+    @include respond-to(sm)
+      width: 100% !important
+  .LeftInner
+    @include respond-to(sm)
+      margin-bottom: 20px
+    .ModalBlock
+      .text-row
+        width: 100% !important
+        height: rem(600px) !important
+        @include respond-to(xs)
+          height: rem(300px) !important
+  .RightInner
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    .top
+      @include respond-to(md)
+        display: none
+      .ModalBlock
+        display: inline-block !important
+        width: 30% !important
+        margin: 10px !important
+        @include respond-to(lg)
+          margin: 5px !important
+        .text-row
+          width: 100% !important
+          height: 150px !important
+          display: inline-block !important
+          @include respond-to(lg)
+            height: 80px !important
+    .bottom
+      .ModalBlock
+        &:first-child
+          .text-row
+            width: 70% !important
+            margin-bottom: rem(15px)
+            height: rem(40px) !important
+        &:nth-child(2)
+          .text-row
+            width: 100% !important
+            margin-bottom: rem(25px)
+            height: rem(60px) !important
+
+.show-loading-animation.rect-shape,
+.show-loading-animation.round-shape,
+.show-loading-animation.text-row,
+.show-loading-animation .rect-shape,
+.show-loading-animation .round-shape,
+.show-loading-animation .text-row
+  background: rgba($gray, .4) !important

@@ -1,0 +1,16 @@
+@import '../../../_mixins/screen-size'
+@import '../../../_mixins/vars'
+@import '../../../_mixins/rem'
+
+.FilterButton
+  cursor: pointer
+  font-size: 25px
+  color: #cccccc
+  &:hover
+    color: $black
+  @include respond-to(lg)
+    font-size: 18px
+  &.active
+    color: $black
+    &:hover
+      color: $gray

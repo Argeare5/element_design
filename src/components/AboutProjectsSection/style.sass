@@ -1,0 +1,175 @@
+@import '../../_mixins/screen-size'
+@import '../../_mixins/vars'
+@import '../../_mixins/rem'
+
+.AboutProjects
+  overflow: hidden
+
+.ActiveSliderNumber
+  font-size: rem(105px)
+  line-height: 1
+  position: absolute
+  padding-right: 75px
+  z-index: 3
+  top: 30%
+  left: 50%
+  transform: translateX(-50%)
+  text-align: right
+  width: 1600px
+  @include respond-to(lg)
+    width: 1000px
+    top: 25%
+    padding-right: 40px
+  @include respond-to(md)
+    width: 750px
+    top: 10%
+  @include respond-to(sm)
+    display: none
+
+.SampleSliderDots__vertical
+  padding-right: rem(2px)
+  left: 50%
+  transform: translateX(-50%)
+  text-align: right
+  z-index: 3
+  width: 1600px
+  @include respond-to(lg)
+    width: 1000px
+    top: 26%
+  @include respond-to(md)
+    width: 750px
+    top: 11%
+  @include respond-to(sm)
+    width: 100%
+    padding: 0 5px 2px
+    top: 0
+    left: 0
+    transform: translateX(0)
+    position: static
+    text-align: center
+    li
+      display: inline-block
+      margin: rem(0 15px 0 0)
+
+.AboutProjects__slider
+  width: 100%
+  .slick-prev
+    display: none !important
+  .slick-slide
+    border: none
+  .slick-list
+    @include respond-to(sm)
+      transition: all .4s ease
+  .SampleSliderArrow__inner
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    width: 1600px
+    @include respond-to(lg)
+      width: 1000px
+    @include respond-to(md)
+      width: 750px
+    @include respond-to(sm)
+      display: none
+  .SampleSliderArrow
+    position: absolute
+    left: 68%
+    bottom: 70px
+    @include respond-to(lg)
+      left: 63%
+      bottom: 10px
+
+.AboutProjects__item
+  display: flex !important
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+  outline: none !important
+  position: relative
+  .Item__left
+    width: 60%
+    height: 100vh
+    min-height: 900px
+    @include respond-to(lg)
+      min-height: 600px
+      width: 55%
+    @include respond-to(md)
+      min-height: 700px
+    @include respond-to(sm)
+      height: auto
+      min-height: 100%
+      width: 100%
+    .Item__image
+      height: 100% !important
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      @include respond-to(sm)
+        min-height: 100%
+        max-height: 400px
+  .Item__right
+    padding: 200px 50px 0 0
+    position: absolute
+    top: 50.4%
+    left: 50.4%
+    transform: translate(-49.6%, -49.6%)
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-end
+    width: 1600px
+    z-index: 4
+    @include respond-to(lg)
+      width: 1000px
+      padding: 150px 30px 0 0
+    @include respond-to(md)
+      width: 750px
+    @include respond-to(sm)
+      width: 100%
+      padding: 0 5px
+      justify-content: space-between
+      align-items: center
+      position: static
+      top: 0
+      left: 0
+      transform: translate(0, 0)
+    .Item__right-content
+      width: 30%
+      @include respond-to(lg)
+        width: 35%
+      @include respond-to(sm)
+        width: 80%
+        padding: 10px 0 15px
+      @include respond-to(xs)
+        width: 75%
+    strong
+      color: $gray
+      font-size: rem(25px)
+      display: block
+      margin-bottom: rem(10px)
+      font-weight: 400
+      @include respond-to(lg)
+        font-size: rem(20px)
+    h2
+      margin-bottom: rem(20px)
+    p
+      margin-bottom: rem(35px)
+      @include respond-to(sm)
+        margin: 0
+    .DefaultButton
+      @include respond-to(sm)
+        display: none
+
+.MobileSliderNumber
+  display: none
+  @include respond-to(sm)
+    display: block
+    width: 20%
+    text-align: center
+    font-size: 43px
+    font-weight: 400
+    padding-right: 5px
+  @include respond-to(xs)
+    width: 25%
+    font-size: 38px
+

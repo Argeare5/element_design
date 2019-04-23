@@ -1,0 +1,30 @@
+@import '../../../_mixins/screen-size'
+@import '../../../_mixins/vars'
+@import '../../../_mixins/rem'
+
+.SocialIcons
+  width: 100%
+  line-height: 1
+  li
+    display: inline-block
+    line-height: 1
+    margin-right: rem(15px)
+    &:last-child
+      margin: 0
+  a
+    line-height: 1
+    &:hover
+      svg
+        path
+          fill: $black
+  svg
+    width: rem(27px)
+    height: rem(27px)
+    path
+      fill: $gray
+      transition: all .3s ease
+
+.SocialIconsRight
+  text-align: right
+  @include respond-to(md)
+    width: 50%

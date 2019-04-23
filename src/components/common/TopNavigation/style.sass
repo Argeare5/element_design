@@ -1,0 +1,46 @@
+@import '../../../_mixins/screen-size'
+@import '../../../_mixins/vars'
+@import '../../../_mixins/rem'
+
+.TopNavigation
+  width: 80%
+  margin-top: rem(10px)
+  @include respond-to(lg)
+    width: 100%
+  ul
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    line-height: 1
+    @include respond-to(sm)
+      flex-direction: column
+      align-items: flex-start
+      margin-top: 25px
+    li
+      display: inline-block
+      line-height: 1
+      @include respond-to(sm)
+        margin-bottom: 20px
+      a
+        line-height: 1
+        font-size: rem(25px)
+        color: $black
+        font-weight: 400
+        position: relative
+        padding-bottom: 2px
+        @include respond-to(lg)
+          font-size: rem(20px)
+        &:after
+          content: ''
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 0
+          height: 1px
+          background: $black
+          transition: all .3s ease
+        &:hover
+          &:after
+            width: 100%

@@ -1,0 +1,115 @@
+@import '../../_mixins/screen-size'
+@import '../../_mixins/vars'
+@import '../../_mixins/rem'
+
+.ServicesSection
+  min-height: 900px
+  height: 100vh
+  @include respond-to(lg)
+    min-height: 600px
+  @include respond-to(md)
+    min-height: 100%
+    height: auto
+  @include respond-to(sm)
+    min-height: 100%
+    height: auto
+    margin: 25px 0 50px
+  .Container
+    justify-content: center
+    align-items: center
+    height: 100%
+    @include respond-to(sm)
+      align-items: flex-start
+
+.ServicesSection__tabs-wrapper
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 100%
+
+.ServicesSection__tabs-list
+  width: 48%
+  @include respond-to(md)
+    width: 100%
+
+.ServicesSection__tab
+  outline: none !important
+  margin-bottom: rem(40px)
+  cursor: pointer
+  transition: all .4s ease
+  width: 100%
+  &:last-child
+    margin: 0
+    @include respond-to(md)
+      margin-bottom: rem(40px)
+  h2
+    font-size: 22px
+    color: #cccccc
+    transition: all .3s ease
+    width: 100%
+    &:hover
+      color: $black
+    @include respond-to(lg)
+      font-size: 18px
+    @include respond-to(sm)
+      font-size: 14px
+  p, strong
+    display: none
+    font-size: rem(15px)
+    color: #494949
+    width: 100%
+    @include respond-to(sm)
+      font-size: 12px
+  strong
+    font-weight: 600
+    margin-top: 5px
+
+.ServicesSection__tab-active
+  padding-left: 70px
+  cursor: default
+  @include respond-to(lg)
+    padding-left: 40px
+  @include respond-to(sm)
+    padding-left: 25px
+  h2
+    font-size: 36px
+    color: $black
+    line-height: 1.1
+    border-bottom: 2px solid $black
+    padding-bottom: rem(10px)
+    margin-bottom: rem(10px)
+    @include respond-to(lg)
+      font-size: 21px
+    @include respond-to(sm)
+      font-size: 16px
+  p, strong
+    display: block
+
+.ServicesSection__content
+  width: 48%
+  position: absolute
+  height: 0
+  transform: scaleX(0)
+  transform-origin: left center !important
+  transition: transform .4s ease
+  @include respond-to(md)
+    width: 100%
+  .ServicesSection__image
+    height: 650px !important
+    @include respond-to(lg)
+      height: 450px !important
+    @include respond-to(md)
+      height: 600px !important
+    @include respond-to(sm)
+      height: 400px !important
+    @include respond-to(xs)
+      height: 300px !important
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &.react-tabs__tab-panel--selected
+    transform: scaleX(1)
+    height: auto
+    position: static

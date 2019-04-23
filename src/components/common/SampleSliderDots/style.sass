@@ -1,0 +1,35 @@
+@import '../../../_mixins/screen-size'
+@import '../../../_mixins/vars'
+@import '../../../_mixins/rem'
+
+.SampleSliderDots
+  li
+    display: inline-block
+    margin-right: rem(15px)
+    &.slick-active
+      button
+        transform: scale(1.1)
+        background: transparent
+        border-color: $black
+    button
+      font-size: 0
+      width: rem(12px)
+      height: rem(12px)
+      border: 1px solid transparent
+      transition: all .3s ease
+      border-radius: 50%
+      background: $gray
+      cursor: pointer
+      &:hover
+        transform: scale(1.1)
+        background: transparent
+        border-color: $black
+
+.SampleSliderDots__vertical
+  position: absolute
+  top: 31%
+  right: 0
+  li
+    margin: rem(0 0 15px 0)
+    display: block
+

@@ -1,0 +1,32 @@
+@import '../../../_mixins/screen-size'
+@import '../../../_mixins/vars'
+@import '../../../_mixins/rem'
+
+.SampleSliderArrow
+  font-weight: 400
+  padding-right: rem(50px)
+  position: relative
+  line-height: 1
+  cursor: pointer
+  &:hover
+    &:before
+      transform: rotate(-30deg)
+      bottom: -4px
+  &:before
+    content: ''
+    position: absolute
+    bottom: 4px
+    right: -1px
+    width: rem(15px)
+    height: 1px
+    background: #636362
+    transform: rotate(30deg)
+    transition: all .3s ease
+  &:after
+    content: ''
+    position: absolute
+    right: 0
+    bottom: 0
+    width: rem(40px)
+    height: 1px
+    background: #636362

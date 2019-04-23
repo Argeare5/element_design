@@ -1,0 +1,168 @@
+@import '../../../_mixins/screen-size'
+@import '../../../_mixins/vars'
+@import '../../../_mixins/rem'
+
+.ProjectInfo
+  position: relative
+  margin-bottom: 50px
+  .SampleSliderArrow__inner
+    position: absolute
+    bottom: rem(-50px)
+    width: 50%
+    .slick-disabled
+      opacity: .3
+      cursor: default
+      &.SampleSliderArrow
+        padding: 0
+        &:after, &:before
+          display: none
+    .SampleSliderArrow
+      @include respond-to(xs)
+        width: 100%
+        padding: 10px 0 !important
+        bottom: -10px
+        &:before, &:after
+          display: none
+  .SampleArrow__prevInner
+    left: 0
+    text-align: left
+    .SampleSliderArrow
+      padding-right: 0
+      padding-left: rem(50px)
+      @include respond-to(xs)
+        text-align: left
+      &:hover
+        &:before
+          transform: rotate(30deg)
+          bottom: -4px
+      &:before
+        left: -1px
+        right: auto
+        transform: rotate(-30deg)
+      &:after
+        left: 0
+        right: auto
+  .SampleArrow__nextInner
+    right: 0
+    text-align: right
+    .SampleSliderArrow
+      @include respond-to(xs)
+        text-align: right
+
+.ProjectInfo__slider-all
+  .slick-list
+    height: 650px !important
+    @include respond-to(lg)
+      height: 500px !important
+    @include respond-to(md)
+      height: 400px !important
+    @include respond-to(sm)
+      height: auto !important
+
+.ProjectInfo__all-item
+  display: flex !important
+  flex-wrap: wrap
+  justify-content: space-between
+  outline: none !important
+
+.ProjectInfo__left-inner, .ProjectInfo__right-inner
+  width: 48%
+  @include respond-to(sm)
+    width: 100%
+
+.ProjectInfo__slider-big
+  width: 100%
+  padding-left: 1px
+  .ProjectInfo__slider-item
+    height: 600px
+    @include respond-to(lg)
+      height: 450px
+    @include respond-to(md)
+      height: 350px
+    @include respond-to(sm)
+      height: 350px
+    @include respond-to(xs)
+      height: 250px
+    .ProjectInfo__slider-item__image
+      width: 100% !important
+      height: 100% !important
+      outline: none !important
+    img
+      width: 100% !important
+      height: 100% !important
+      object-fit: cover
+  .slick-arrow
+    position: absolute
+    top: 50%
+    z-index: 5
+    border: solid $gray
+    border-width: 0 2px 2px 0
+    display: inline-block
+    padding: rem(15px)
+    font-size: 0
+    line-height: 0
+    margin: 0
+    cursor: pointer
+    &:hover
+      border-color: $black
+  .slick-disabled
+    opacity: .2
+  .slick-prev
+    left: 15px
+    transform: translateY(-50%) rotate(135deg)
+  .slick-next
+    transform: translateY(-50%) rotate(-45deg)
+    right: 15px
+
+.ProjectInfo__right-inner
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  justify-content: space-between
+
+.ProjectInfo__small-images
+  display: flex
+  flex-wrap: wrap
+  @include respond-to(md)
+    display: none
+  div
+    width: 30% !important
+    height: 150px !important
+    margin: 10px !important
+    border: 2px solid transparent
+    transition: all .3s ease
+    cursor: pointer
+    &.active, &:hover
+      border: 2px solid $black
+    &.active
+      cursor: default
+    @include respond-to(lg)
+      height: 80px !important
+      margin: 5px !important
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+.ProjectInfo__description
+  margin-left: 10px
+  margin-bottom: 50px
+  @include respond-to(lg)
+    margin-bottom: 35px
+  @include respond-to(sm)
+    margin-bottom: 0
+    margin-left: 5px
+    margin-top: 10px
+  strong
+    display: block
+    font-weight: 500
+    color: $gray
+    margin-bottom: 10px
+    font-size: 25px
+    @include respond-to(lg)
+      font-size: rem(18px)
+      margin-bottom: 5px
+  h2
+    @include respond-to(lg)
+      font-size: rem(34px)
+      margin-bottom: 10px

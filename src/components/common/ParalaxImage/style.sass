@@ -1,0 +1,34 @@
+@import '../../../_mixins/screen-size'
+
+.ParallaxImage
+  position: absolute
+  z-index: 1
+  right: 0
+  width: 35%
+  @include respond-to(sm)
+    width: 45%
+  img
+    width: 100%
+    height: auto
+
+.ParallaxImage2
+  position: absolute
+  z-index: 1
+  left: 0
+  width: 15%
+  @include respond-to(sm)
+    width: 40%
+  img
+    width: 100%
+    height: auto
+
+.ParallaxImage3
+  position: absolute
+  z-index: 1
+  right: 0
+  width: 20%
+  @include respond-to(sm)
+    width: 45%
+  img
+    width: 100%
+    height: auto

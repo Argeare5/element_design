@@ -1,0 +1,73 @@
+@import '../../_mixins/screen-size'
+@import '../../_mixins/vars'
+@import '../../_mixins/rem'
+
+.Contacts
+  padding: 80px 0
+  @include respond-to(lg)
+    padding: 50px 0
+  .Container
+    justify-content: space-between
+    align-items: center
+
+.Contacts__map
+  width: 50%
+  height: calc(100vh - 160px)
+  min-height: 700px
+  @include respond-to(lg)
+    height: calc(100vh - 100px)
+    min-height: 600px
+    width: 58%
+  @include respond-to(md)
+    width: 100%
+    margin-bottom: rem(20px)
+    min-height: 100%
+    height: 600px
+  @include respond-to(sm)
+    height: 450px
+  @include respond-to(xs)
+    height: 300px
+
+.Contacts__right-inner
+  width: 45%
+  @include respond-to(lg)
+    width: 39%
+  @include respond-to(md)
+    width: 100%
+    text-align: center
+  .SocialIcons
+    margin-bottom: rem(60px)
+    @include respond-to(lg)
+      margin-bottom: rem(40px)
+
+.Contact__address
+  margin-bottom: rem(30px)
+  font-size: rem(25px)
+  font-weight: 400
+  line-height: 1.4
+  @include respond-to(lg)
+    margin-bottom: rem(20px)
+    font-size: rem(18px)
+
+.Contact__info
+  font-size: rem(25px)
+  margin-bottom: rem(50px)
+  @include respond-to(lg)
+    margin-bottom: rem(30px)
+    font-size: rem(18px)
+  a
+    line-height: 1.4
+    color: $black
+    position: relative
+    font-weight: 400
+    &:hover
+      color: $gray
+
+.MapMarker
+  svg
+    width: 50px
+    position: relative
+    bottom: 40px
+    right: 25px
+
+

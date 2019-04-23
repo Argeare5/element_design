@@ -1,0 +1,15 @@
+@import '../../../_mixins/screen-size'
+
+.Container
+  width: 1600px
+  margin: 0 auto
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  @include respond-to(lg)
+    width: 1000px
+  @include respond-to(md)
+    width: 750px
+  @include respond-to(sm)
+    width: 100%
+    padding: 0 5px
