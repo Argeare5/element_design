@@ -1,0 +1,73 @@
+{
+  "name": "Element",
+  "description": "Element",
+  "version": "1.0.0",
+  "author": "Alexandr Tkach <argeares97@gmail.com>",
+  "dependencies": {
+    "@hot-loader/react-dom": "^16.8.4",
+    "@material-ui/core": "^3.6.1",
+    "axios": "^0.18.0",
+    "classnames": "^2.2.6",
+    "core-js": "^2.6.5",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "gatsby": "^2.1.37",
+    "gatsby-image": "^2.0.34",
+    "gatsby-plugin-eslint": "^2.0.4",
+    "gatsby-plugin-favicon": "^3.1.5",
+    "gatsby-plugin-layout": "^1.0.13",
+    "gatsby-plugin-manifest": "^2.0.24",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.10",
+    "gatsby-plugin-react-svg": "^2.1.1",
+    "gatsby-plugin-sass": "^2.0.11",
+    "gatsby-plugin-sharp": "^2.0.29",
+    "gatsby-source-filesystem": "^2.0.27",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "google-map-react": "^1.1.2",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-burger-menu": "^2.6.5",
+    "react-dom": "^16.8.4",
+    "react-helmet": "^5.2.0",
+    "react-ink": "^6.4.0",
+    "react-modal": "^3.5.1",
+    "react-placeholder": "^3.0.2",
+    "react-scroll-parallax": "^2.0.4",
+    "react-simple-img": "^2.1.7",
+    "react-slick": "0.23.1",
+    "react-tabs": "^3.0.0",
+    "react-transition-group": "^2.6.1",
+    "url-search-params-polyfill": "^5.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-preset-gatsby": "^0.1.9",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
+    "gatsby-plugin-eslint": "^2.0.1",
+    "prettier": "^1.14.2"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "eslint --ext=js --fix .",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

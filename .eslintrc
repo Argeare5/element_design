@@ -1,0 +1,60 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": ["error", {
+      "printWidth": 120,
+      "singleQuote": true,
+      "trailingComma": "es5",
+      "semi": false,
+      "jsxBracketSameLine": true
+    }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],  // Allow JSX in .js files
+
+    // DONT ENABLE
+    "import/no-named-as-default": "off",
+    "import/prefer-default-export": "off",
+    "react/forbid-prop-types": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/label-has-for": "off",
+
+    "react/jsx-curly-brace-presence": "off",
+    "react/no-access-state-in-setstate": "off",
+    "react/no-did-update-set-state": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+
+    "consistent-return": "off",
+    "no-param-reassign": "off",
+    "no-shadow": "off",
+    "prefer-destructuring": "off",
+    "import/no-cycle": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/no-array-index-key": "off",
+    "react/no-danger": "off"
+  }
+}
